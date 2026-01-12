@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Users</title>
+    <style>
+      label { display: block; margin-top: 8px; }
+      ul { padding-left: 18px; }
+      .actions button { margin-left: 6px; }
+      .panel { border: 1px solid #ccc; padding: 8px; margin-top: 8px; }
+      .row { display:flex; gap:8px; align-items:center; margin-top:6px;}
+      input[type="text"], input[type="email"], input[type="password"], select { width: 250px; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="chat.html">Chat</a>
+      <a href="users.html">Users</a>
+      <a href="products.html">Products</a>
+      <a href="auth.html">Auth</a>
+    </nav>
+
+    <h1>Users</h1>
+
+    <div class="panel">
+      <h3>Register</h3>
+      <label>Email: <input id="r-email" type="email" /></label>
+      <label>Password: <input id="r-password" type="password" /></label>
+      <label>Role:
+        <select id="r-role">
+          <option value="customer" selected>customer</option>
+          <option value="admin">admin</option>
+        </select>
+      </label>
+      <div class="row">
+        <button id="r-register">Register</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Search / Load</h3>
+      <div class="row">
+        <label>ID: <input id="s-id" type="text" /></label>
+        <button id="s-getById">Get by ID</button>
+        <button id="s-refresh">Refresh list</button>
+      </div>
+      <div class="row">
+        <label>Email: <input id="s-email" type="email" /></label>
+        <button id="s-getByEmail">Get by Email</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>List</h3>
+      <ul id="u-list"></ul>
+    </div>
+
+    <div class="panel">
+      <h3>Detail / Edit</h3>
+      <label>ID: <input id="d-id" type="text" readonly /></label>
+      <label>Email: <input id="d-email" type="email" /></label>
+      <label>Password (optional): <input id="d-password" type="password" /></label>
+      <label>Role:
+        <select id="d-role">
+          <option value="customer">customer</option>
+          <option value="admin">admin</option>
+        </select>
+      </label>
+      <div class="row">
+        <button id="d-put">Save (PUT)</button>
+        <button id="d-patch">Patch</button>
+        <button id="d-delete">Delete</button>
+        <button id="d-clear">Clear</button>
+      </div>
+    </div>
+
+    <script src="./common.js"></script>
+    <script src="./users.js"></script>
+  </body>
+</html>

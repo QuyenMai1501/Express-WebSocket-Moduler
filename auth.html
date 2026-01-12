@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Auth</title>
+  <style>label{display:block;margin-top:8px;} textarea{width:100%;}</style>
+</head>
+<body>
+  <nav>
+    <a href="chat.html">Chat</a>
+    <a href="users.html">Users</a>
+    <a href="products.html">Products</a>
+    <a href="auth.html">Auth</a>
+  </nav>
+
+  <h1>Auth</h1>
+
+  <div>
+    <h3>Login</h3>
+    <label>Email: <input id="a-email" /></label>
+    <label>Password: <input id="a-pass" type="password" /></label>
+    <button id="a-login">Login</button>
+  </div>
+
+  <div>
+    <h3>Token</h3>
+    <textarea id="a-token" rows="3" cols="60" readonly></textarea>
+    <div>
+      <button id="a-copy">Copy token</button>
+      <button id="a-save">Store token</button>
+      <button id="a-refresh">Refresh token</button>
+      <button id="a-logout">Logout</button>
+    </div>
+    <pre id="me-info"></pre>
+  </div>
+
+  <script src="./common.js"></script>
+  <script src="./auth.js"></script>
+</body>
+</html>

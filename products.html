@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Products</title>
+  <style>
+    label{display:block;margin-top:8px;}
+    ul{padding-left:18px;}
+    .actions button{margin-left:6px;}
+    .panel{border:1px solid #ccc;padding:8px;margin-top:8px;}
+    .row{display:flex;gap:8px;align-items:center;margin-top:6px;}
+    input[type="text"], input[type="number"], select {width:220px;}
+    textarea {width:100%;height:60px;}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="chat.html">Chat</a>
+    <a href="users.html">Users</a>
+    <a href="products.html">Products</a>
+    <a href="auth.html">Auth</a>
+  </nav>
+
+  <h1>Products</h1>
+
+  <div class="panel">
+    <h3>Create</h3>
+    <label>SKU: <input id="p-sku" type="text" /></label>
+    <label>Title: <input id="p-title" type="text" /></label>
+    <label>Description: <textarea id="p-desc"></textarea></label>
+    <label>Price: <input id="p-price" type="number" step="0.01" /></label>
+    <label>Currency:
+      <select id="p-currency">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+      </select>
+    </label>
+    <label>Category: <input id="p-category" type="text" /></label>
+    <label>Tags (comma separated): <input id="p-tags" type="text" /></label>
+    <div class="row">
+      <button id="p-create">Create</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>List</h3>
+    <button id="p-refresh">Refresh</button>
+    <ul id="p-list"></ul>
+  </div>
+
+  <div class="panel">
+    <h3>Detail / Edit</h3>
+    <label>ID: <input id="d-id" type="text" readonly /></label>
+    <label>SKU: <input id="d-sku" type="text" /></label>
+    <label>Title: <input id="d-title" type="text" /></label>
+    <label>Description: <textarea id="d-desc"></textarea></label>
+    <label>Price: <input id="d-price" type="number" step="0.01" /></label>
+    <label>Currency:
+      <select id="d-currency">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+      </select>
+    </label>
+    <label>Category: <input id="d-category" type="text" /></label>
+    <label>Tags (comma separated): <input id="d-tags" type="text" /></label>
+    <div class="row">
+      <button id="d-patch">Patch</button>
+      <button id="d-delete">Delete</button>
+      <button id="d-clear">Clear</button>
+    </div>
+  </div>
+
+  <script src="./common.js"></script>
+  <script src="./products.js"></script>
+</body>
+</html>
