@@ -1,0 +1,12 @@
+import { Router } from "express";
+import { requireAuth } from "../../middlewares/auth.middleware.js";
+import { ChatDatabase } from "./chat.database.js";
+import { ChatService } from "./chat.service.js";
+import { ChatController } from "./chat.controller.js";
+const router = Router();
+const db = new ChatDatabase();
+const service = new ChatService(db);
+const controller = new ChatController(service);
+router.get("/messages", requireAuth, controller.listMessages);
+export const chatRoutes = router;
+//# sourceMappingURL=chat.routes.js.map
