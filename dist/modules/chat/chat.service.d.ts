@@ -7,10 +7,16 @@ export declare class ChatService {
         userEmail: string;
         role: "customer" | "admin";
         text: string;
+        isPublic?: boolean;
+        recipientId?: string;
+        recipientEmail?: string;
     }): Promise<import("./chat.model.js").ChatMessageEntity>;
     listHistory(input: {
         limit?: string;
         before?: string;
+        scope?: string;
+        userId?: string | undefined;
+        withUserId?: string | undefined;
     }): Promise<import("./chat.model.js").ChatMessageEntity[]>;
 }
 //# sourceMappingURL=chat.service.d.ts.map

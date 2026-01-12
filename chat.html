@@ -30,6 +30,11 @@
 
     <div id="box"></div>
 
+    <label><input type="radio" name="scope" value="public" checked /> Public</label>
+    <label><input type="radio" name="scope" value="private" /> Private</label>
+    <input type="text" id="recipient" placeholder="Recipient email (for private)" />
+    <br/>
+
     <input type="text" id="text" placeholder="Enter your message..." />
     <button onclick="send()">Send</button>
     <script src="./script.js"></script>

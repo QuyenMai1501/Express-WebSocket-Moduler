@@ -4,5 +4,6 @@ export declare class ChatController {
     private readonly chatService;
     constructor(chatService: ChatService);
     listMessages: (req: Request, res: Response) => Promise<void>;
+    postMessage: (req: Request, res: Response) => Promise<void>;
 }
 //# sourceMappingURL=chat.controller.d.ts.map

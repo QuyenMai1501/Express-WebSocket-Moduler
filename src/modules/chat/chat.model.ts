@@ -7,6 +7,10 @@ export type ChatMessageDoc = {
 
   text: string;
 
+  isPublic: boolean;
+  recipientId?: ObjectId | undefined;
+  recipientEmail?: string | undefined;
+
   createdAt: Date;
 };
 

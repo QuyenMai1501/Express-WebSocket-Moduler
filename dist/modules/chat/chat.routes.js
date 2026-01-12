@@ -8,5 +8,6 @@ const db = new ChatDatabase();
 const service = new ChatService(db);
 const controller = new ChatController(service);
 router.get("/messages", requireAuth, controller.listMessages);
+router.post("/messages", requireAuth, controller.postMessage);
 export const chatRoutes = router;
 //# sourceMappingURL=chat.routes.js.map

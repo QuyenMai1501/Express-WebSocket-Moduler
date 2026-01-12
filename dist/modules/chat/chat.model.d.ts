@@ -4,6 +4,9 @@ export type ChatMessageDoc = {
     userEmail: string;
     role: "customer" | "admin";
     text: string;
+    isPublic: boolean;
+    recipientId?: ObjectId | undefined;
+    recipientEmail?: string | undefined;
     createdAt: Date;
 };
 export type ChatMessageEntity = ChatMessageDoc & {
